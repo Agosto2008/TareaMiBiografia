@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Biografia</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #38bdf8);
+            padding: 20px;
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .tarjeta {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            padding: 35px 30px;
+            text-align: center;
+            animation: aparecer 0.6s ease;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .titulo {
+            font-size: 30px;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            font-size: 15px;
+            color: #475569;
+            margin-bottom: 20px;
+        }
+
+        .biografia {
+            font-size: 15px;
+            color: #1e293b;
+            line-height: 1.6;
+            text-align: justify;
+            margin-top: 15px;
+        }
+
+        .acciones {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .boton {
+            display: block;
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 14px;
+            text-decoration: none;
+            background: linear-gradient(135deg, #2563eb, #0ea5e9);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+        }
+
+        .boton:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 24px rgba(37, 99, 235, 0.35);
+        }
+
+        @media (max-width: 480px) {
+            .tarjeta {
+                padding: 28px 22px;
+            }
+
+            .titulo {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="contenedor">
+    <div class="tarjeta">
+
+        <h1 class="titulo">Mi Biografía</h1>
+        <h2 class="subtitulo">Conoce un poco más sobre mí</h2>
+
+        <p class="biografia">
+            Hola, mi nombre es David Estuardo Lacayo Morataya, naci un 14 de Agosto del año 2008, en la ciudad de Guatemala, actualmente con 17 años de edad. <br>Soy estudiante de informática y me apasiona el desarrollo web.
+            Me interesa aprender tecnologías como Java, Spring Boot y Thymeleaf para crear aplicaciones modernas.
+            Disfruto resolver problemas, mejorar mis habilidades de programación y trabajar en proyectos prácticos
+            que me ayuden a crecer como desarrollador.
+        </p>
+
+        <img src="C:\Users\Informatica\Downloads\IMG_20260102_130239946_HDR.jpg">
+
+        <h2 class="subtitulo">Estas son mis habilidades</h2>
+
+        <p class="habilidades">
+            - Soy bueno para aprender
+            <br>- Tengo un gusto por la musica
+            <br>- Toco la guitara Acustica
+            <br>- Me gusta cantar
+            <br>- Soy disciplinado
+            <br>- Soy responsable
+            <br>- La gente puede confiar en mi
+            <br>- Soy bueno para los deportes
+            <br>- Soy muy atletico
+            <br>- Hago reir a la gente
+            <br>- Juego baseball
+        </p>
+
+        <div class="acciones">
+            <a class="boton" th:href="@{/home}">Ir a Home</a>
+            <a class="boton" th:href="@{/datos}">Ir a Datos</a>
+            <a class="boton" th:href="@{/usuario}">Ir a Usuario</a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
